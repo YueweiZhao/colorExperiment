@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>认知测评</title>
+</head>
+<body>
+
+<!---选择年龄--->
+<div class="choose-age" id="choose-age" style="display: none">
+  <div class="age-item" data-val="" >请选择你的年龄段~</div>
+  <div class="age-span">
+    <button id="before-five" type="button" class="el-button el-button--primary"><span>我还不到五岁呢！</span></button>
+  </div>
+  <div class="age-span">
+    <button id="after-five" type="button" class="el-button el-button--primary"><span>我已经超过五岁啦！</span></button>
+  </div>
+</div>
+
+<!---介绍语--->
+<img id="introduction" src="" style="position: fixed; height: 100%; width: 100%; display: none;" alt="介绍语">
+
+<!---小鱼实验--->
+<div class="fish-container" id="fish-experiment" style="display: none"></div>
+<!---规则任务实验--->
+<div class="rule-container" id="rule-experiment" style="display: none">
+    <div style="grid-area: b; font-size: 2em; text-align: center;">判断：</div>
+    <img id="rule-question" alt="rule-question" src=""
+         style="grid-area: c; height: 150px; width: 150px; border: solid 2px black;">
+    <img class="rule-option" alt="one_red_dot" src="static/image/graphImages/one_red_dot.JPG"
+         style="grid-area: e; height: 150px; width: 150px; border: solid 2px black;">
+    <img class="rule-option" alt="two_yellow_triangles" src="static/image/graphImages/two_yellow_triangles.JPG"
+         style="grid-area: f; height: 150px; width: 150px; border: solid 2px black;">
+    <img class="rule-option" alt="three_green_crosses" src="static/image/graphImages/three_green_crosses.JPG"
+         style="grid-area: g; height: 150px; width: 150px; border: solid 2px black;">
+    <img class="rule-option" alt="four_blue_stars" src="static/image/graphImages/four_blue_stars.JPG"
+         style="grid-area: h; height: 150px; width: 150px; border: solid 2px black;">
+</div>
+<!---转换任务实验--->
+<div class="transform-container" id="transform-experiment" style="display: none;"></div>
+<!---工作记忆实验--->
+<div class="memory-container" id="memory-experiment" style="display: none;">
+    <div class="memory-item" id="0" style="grid-area: a;"></div>
+    <div class="memory-item" id="1" style="grid-area: b;"></div>
+    <div class="memory-item" id="2" style="grid-area: c;"></div>
+    <div class="memory-item" id="3" style="grid-area: d;"></div>
+    <div class="memory-item" id="4" style="grid-area: e;"></div>
+    <div class="memory-item" id="5" style="grid-area: f;"></div>
+    <div class="memory-item" id="6" style="grid-area: g;"></div>
+    <div class="memory-item" id="7" style="grid-area: h;"></div>
+    <div class="memory-item" id="8" style="grid-area: i;"></div>
+    <div class="memory-item" id="9" style="grid-area: j;"></div>
+    <div class="memory-item" id="10" style="grid-area: k;"></div>
+    <div class="memory-item" id="11" style="grid-area: l;"></div>
+    <div class="memory-item" id="12" style="grid-area: m;"></div>
+    <div class="memory-item" id="13" style="grid-area: n;"></div>
+    <div class="memory-item" id="14" style="grid-area: o;"></div>
+    <div class="memory-item" id="15" style="grid-area: p;"></div>
+    <div class="memory-item" id="16" style="grid-area: q;"></div>
+    <div class="memory-item" id="17" style="grid-area: r;"></div>
+    <div class="memory-item" id="18" style="grid-area: s;"></div>
+    <div class="memory-item" id="19" style="grid-area: t;"></div>
+    <div class="memory-item" id="20" style="grid-area: u;"></div>
+    <div class="memory-item" id="21" style="grid-area: v;"></div>
+    <div class="memory-item" id="22" style="grid-area: w;"></div>
+    <div class="memory-item" id="23" style="grid-area: x;"></div>
+    <div class="memory-item" id="24" style="grid-area: y;"></div>
+</div>
+<!---注意力实验--->
+<div class="attention-container" id="attention-experiment" style="display: none;"></div>
+
+<!---中心十字符号--->
+<div class="plus-char-container" id="plus-char" style="display: none;">
+    <span class="plus-char-item">+</span>
+</div>
+<!---提示语--->
+<div aria-label="提示语" aria-modal="true" class="el-message-box__wrapper" role="dialog"
+     style="z-index: 2005; display: none;"
+     tabindex="-1" id="alertMessage">
+    <div class="el-message-box">
+        <div class="el-message-box__header">
+            <div class="el-message-box__title">
+                <span>提示标题</span>
+            </div>
+        </div>
+        <div class="el-message-box__content">
+            <div>
+                <div class="el-message-box__message"><p>提示内容</p></div>
+            </div>
+            <div class="el-message-box__input" style="display: none;">
+                <div class="el-input">
+                    <input autocomplete="off" class="el-input__inner" placeholder="" type="text">
+                </div>
+                <div class="el-message-box__errormsg" style="visibility: hidden;"></div>
+            </div>
+        </div>
+        <div class="el-message-box__btns">
+            <button class="el-button el-button--default el-button--small el-button--primary " type="button">
+        <span>
+          确定
+        </span></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
